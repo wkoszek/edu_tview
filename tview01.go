@@ -7,11 +7,13 @@ import (
 
 func main() {
 
-	but := tview.NewButton("First button")
-	but.SetBackgroundColor(tcell.GetColor("yellow"))
-	but.SetLabelColorActivated(tcell.GetColor("maroon"))
+	app := tview.NewApplication()
 
-	if err := tview.NewApplication().SetRoot(but, false).Run(); err != nil {
+	but := tview.NewButton("First button")
+	but.SetBackgroundColorActivated(tcell.ColorMaroon)
+	but.SetLabelColorActivated(tcell.GetColor("yellow"))
+
+	if err := app.SetRoot(but, false).Run(); err != nil {
 		panic(err)
 	}
 }
