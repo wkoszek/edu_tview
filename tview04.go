@@ -33,6 +33,7 @@ func main() {
 		if event.Name() == "Rune[c]" || event.Name() == "Rune[C]" {
 			t0.SetText("hhhh")
 		}
+		t0.SetText(event.Name())
 
 		return nil
 	})
